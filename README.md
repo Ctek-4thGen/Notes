@@ -13,7 +13,7 @@ This mini app adds/removes postIt-like notes
 
 ```bash
 # clone the repo
-git clone https://git@github.com:Ctek-4thGen/PostIt.git
+git clone https://git@github.com:Ctek-4thGen/Notes.git
 
 # change directory to repo
 cd Notes
