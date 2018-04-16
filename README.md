@@ -16,7 +16,7 @@ This mini app adds/removes postIt-like notes
 git clone https://git@github.com:Ctek-4thGen/PostIt.git
 
 # change directory to repo
-cd PostIt
+cd Notes
 
 # Use yarn to install the dependencies
 yarn
