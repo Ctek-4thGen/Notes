@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="col-md-12">
+    <h1>My Notes</h1>
+    <div>
+      <button class="btn btn-success" (click)="showNewForm()">
+        <i class="fas fa-plus"></i>
+      </button>
+    </div>
+  <div class="row">
+    <div class="col-sm-4 postIt-container" *ngFor="let note of notes" [ngStyle]="{background: note.color}">
+      <div>
+        <button class="delete-btn" (click)="removeNote(note)">
+          <i class="fas fa-trash-alt"></i>
+        </button>
+        <button class="edit-btn" (click)="showEditForm(note)">
+          <i class="fas fa-pencil-alt edit-pencil"></i>
+        </button>
+        <div class="note-title">{{ note.name }}</div>
+      </div>
+      <div class="notes-container">{{ note.notes }}</div>
+    </div>
+  </div>
+
+    <form *ngIf="showForm()" [formGroup]="formGroup" (ngSubmit)="saveNote(formGroup.value)">
+      <h2>{{headerText}}</h2>
+      <p class="add-new-field-titles">Title</p> <input type="text" name="name" formControlName="name" />
+      <p class="add-new-field-titles">Notes</p> <textarea class="postIt-body-edit" type="text" name="notes" formControlName="notes"></textarea>
+      <div class="">
+        <p class="add-new-field-titles">Color</p>
+        <select class="color-selection" formControlName="color">
+          <option value="lightpink">Pink</option>
+          <option value="lightyellow">Yellow</option>
+          <option value="lightgreen">Green</option>
+        </select>
+      </div>
+      <p style="text-align: center;">
+        <input type="submit" class="btn btn-primary" value="Save">
+        <input type="button" class="btn btn-warning" value="Cancel" (click)="cancelEditNote()">
+      </p>
+    </form>
+  </div>
+ </div>

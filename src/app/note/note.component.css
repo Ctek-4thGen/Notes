@@ -1,0 +1,36 @@
+.postIt-container {
+  height: 250px;
+  max-width: 250px;
+  background: pink;
+  border: none;
+  margin: 15px;
+  box-shadow: 2px 3px 8px #888888;
+}
+
+.delete-btn, .edit-btn {
+  background:transparent;
+  float: right;
+  margin: 5px 0;
+  border: none;
+}
+.notes-container {
+  margin-top: 10px;
+}
+.note-title {
+  padding: 8px 3px;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.postIt-body-edit {
+  height: 50px;
+  overflow: auto;
+}
+
+.add-new-field-titles {
+  padding-top: 5px;
+  margin-bottom: 5px;
+}
+.color-selection {
+  width: 182px;
+}
