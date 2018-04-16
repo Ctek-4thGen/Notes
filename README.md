@@ -1,4 +1,4 @@
-# Angular 5.2.4 PostIt App
+# Angular 5.2.4 Notes App
 
 This mini app adds/removes postIt-like notes
 
